@@ -147,7 +147,7 @@ const editButton = (row, book) => {
 
       $editButtonTd.removeChild($saveButton);
       $editButtonTd.appendChild($editButton);
-
+      
       updateTable();
     });
   });
@@ -161,7 +161,7 @@ updateTable();
 
 
 $submitButton.onclick = (event) => {
-  if (validator() == false) return;
+  if (validator() == false) return false;
   addBookToLibrary();
   cleanText();
   updateTable();
